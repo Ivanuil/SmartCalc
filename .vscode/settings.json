@@ -1,0 +1,24 @@
+{
+    "C_Cpp.default.compilerPath": "/usr/bin/gcc",
+    "files.associations": {
+        "list.h": "c",
+        "string.h": "c"
+    },
+    "cSpell.words": [
+        "Ammount",
+        "Ammout",
+        "Capitalisation",
+        "codestyle",
+        "Doxygen",
+        "interst",
+        "Inteterst",
+        "lcov",
+        "Outout",
+        "VARX",
+        "Xmax",
+        "Xmin",
+        "Yauto",
+        "Ymax",
+        "Ymin"
+    ]
+}
