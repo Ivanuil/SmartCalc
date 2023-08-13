@@ -1,6 +1,5 @@
 #include <check.h>
 
-#include "banks.h"
 #include "calc.h"
 #include "list.h"
 #include "stack.h"
@@ -681,75 +680,6 @@ START_TEST(test_calculate_for_x) {
 }
 END_TEST
 
-START_TEST(test_calculate_dif_loan) {
-  Loan loan = calculateDifferentiatedLoan(100000, 10, 0.05);
-  ck_assert_double_eq(loan.interestRate, 0.05);
-  ck_assert_double_eq(loan.loanAmount, 100000);
-  ck_assert_double_eq_tol(loan.overpayment, 2291.67, 0.01);
-  ck_assert_int_eq(loan.term, 10);
-  ck_assert_double_eq_tol(loan.totalPayment, 102291.67, 0.01);
-
-  ck_assert_double_eq_tol(loan.monthlyPayments[0], 10000 + 416.67, 0.01);
-  ck_assert_double_eq_tol(loan.monthlyPayments[1], 10000 + 375.00, 0.01);
-  ck_assert_double_eq_tol(loan.monthlyPayments[2], 10000 + 333.33, 0.01);
-  ck_assert_double_eq_tol(loan.monthlyPayments[3], 10000 + 291.67, 0.01);
-  ck_assert_double_eq_tol(loan.monthlyPayments[4], 10000 + 250.00, 0.01);
-  ck_assert_double_eq_tol(loan.monthlyPayments[5], 10000 + 208.33, 0.01);
-  ck_assert_double_eq_tol(loan.monthlyPayments[6], 10000 + 166.67, 0.01);
-  ck_assert_double_eq_tol(loan.monthlyPayments[7], 10000 + 125.00, 0.01);
-  ck_assert_double_eq_tol(loan.monthlyPayments[8], 10000 + 83.33, 0.01);
-  ck_assert_double_eq_tol(loan.monthlyPayments[9], 10000 + 41.67, 0.01);
-
-  free(loan.monthlyPayments);
-}
-
-START_TEST(test_calculate_annuity_loan) {
-  Loan loan = calculateAnnuityLoan(100000, 10, 0.05);
-  ck_assert_double_eq(loan.interestRate, 0.05);
-  ck_assert_double_eq(loan.loanAmount, 100000);
-  ck_assert_double_eq_tol(loan.overpayment, 2305.96, 0.01);
-  ck_assert_int_eq(loan.term, 10);
-  ck_assert_double_eq_tol(loan.totalPayment, 102306.00, 0.05);
-
-  for (int month = 0; month < loan.term; month++)
-    ck_assert_double_eq_tol(loan.monthlyPayments[month], 10230.60, 0.01);
-
-  free(loan.monthlyPayments);
-}
-END_TEST
-
-START_TEST(test_calculate_deposit) {
-  Deposit deposit = calculateDeposit(100000, 10 * 30, 0.05, 0.13, 30, false,
-                                     NULL, 0, NULL, 0);
-  ck_assert_double_eq_tol(deposit.accruedPercents, 4109.59, 0.01);
-  ck_assert_double_eq_tol(deposit.assessedTaxes, 534.25, 0.01);
-  ck_assert_double_eq_tol(deposit.total, 103575.34, 0.01);
-
-  deposit =
-      calculateDeposit(100000, 2 * 30, 0.05, 0.0, 30, true, NULL, 0, NULL, 0);
-  ck_assert_double_eq_tol(deposit.accruedPercents, 410.96 + 412.68, 0.04);
-  ck_assert_double_eq_tol(deposit.assessedTaxes, 0, 0.01);
-  ck_assert_double_eq_tol(deposit.total, 100000 + 410.96 + 412.68, 0.1);
-
-  Operation operation = {0};
-  operation.date = 1;
-  operation.amount = 10000;
-  deposit = calculateDeposit(90000, 10 * 30, 0.05, 0.13, 30, false, &operation,
-                             1, NULL, 0);
-  ck_assert_double_eq_tol(deposit.accruedPercents, 4109.59, 0.01);
-  ck_assert_double_eq_tol(deposit.assessedTaxes, 534.25, 0.01);
-  ck_assert_double_eq_tol(deposit.total, 103575.34, 0.01);
-
-  operation.date = 1;
-  operation.amount = 10000;
-  deposit = calculateDeposit(110000, 10 * 30, 0.05, 0.13, 30, false, NULL, 0,
-                             &operation, 1);
-  ck_assert_double_eq_tol(deposit.accruedPercents, 4109.59, 0.01);
-  ck_assert_double_eq_tol(deposit.assessedTaxes, 534.25, 0.01);
-  ck_assert_double_eq_tol(deposit.total, 103575.34, 0.01);
-}
-END_TEST
-
 Suite *suite_calc(void) {
   Suite *s;
   s = suite_create("calc");
@@ -771,13 +701,6 @@ Suite *suite_calc(void) {
   tcase_add_test(tc_calc, test_calculate_segfault);
   tcase_add_test(tc_calc, test_calculate_for_x);
   suite_add_tcase(s, tc_calc);
-
-  TCase *tc_banks;
-  tc_banks = tcase_create("banks");
-  tcase_add_test(tc_banks, test_calculate_dif_loan);
-  tcase_add_test(tc_banks, test_calculate_annuity_loan);
-  tcase_add_test(tc_banks, test_calculate_deposit);
-  suite_add_tcase(s, tc_banks);
 
   return s;
 }

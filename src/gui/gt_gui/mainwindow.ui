@@ -7,235 +7,19 @@
     <x>0</x>
     <y>0</y>
     <width>1402</width>
-    <height>692</height>
+    <height>558</height>
    </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QLineEdit" name="lineEdit_12">
-    <property name="geometry">
-     <rect>
-      <x>459</x>
-      <y>421</y>
-      <width>125</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Capitalisation:</string>
-    </property>
-    <property name="readOnly">
-     <bool>true</bool>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="lineEdit_10">
-    <property name="geometry">
-     <rect>
-      <x>459</x>
-      <y>359</y>
-      <width>125</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Tax rate: </string>
-    </property>
-    <property name="readOnly">
-     <bool>true</bool>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="depositInteterstRateTextEdit">
-    <property name="geometry">
-     <rect>
-      <x>612</x>
-      <y>328</y>
-      <width>125</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>0</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="lineEdit_8">
-    <property name="geometry">
-     <rect>
-      <x>459</x>
-      <y>297</y>
-      <width>125</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Term: </string>
-    </property>
-    <property name="readOnly">
-     <bool>true</bool>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="lineEdit_4">
-    <property name="geometry">
-     <rect>
-      <x>156</x>
-      <y>260</y>
-      <width>125</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Loan ammount: </string>
-    </property>
-    <property name="readOnly">
-     <bool>true</bool>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="depositTermTextEdit">
-    <property name="geometry">
-     <rect>
-      <x>612</x>
-      <y>297</y>
-      <width>125</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>0</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="loanAnnButton">
-    <property name="geometry">
-     <rect>
-      <x>304</x>
-      <y>450</y>
-      <width>118</width>
-      <height>32</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Loan (Annuity)</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="lineEdit_11">
-    <property name="geometry">
-     <rect>
-      <x>459</x>
-      <y>390</y>
-      <width>125</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Payments periodicity: </string>
-    </property>
-    <property name="readOnly">
-     <bool>true</bool>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="depositAmmoutTextEdit">
-    <property name="geometry">
-     <rect>
-      <x>612</x>
-      <y>260</y>
-      <width>125</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>0</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="lineEdit_6">
-    <property name="geometry">
-     <rect>
-      <x>156</x>
-      <y>320</y>
-      <width>125</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Interest rate: </string>
-    </property>
-    <property name="readOnly">
-     <bool>true</bool>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="lineEdit_5">
-    <property name="geometry">
-     <rect>
-      <x>156</x>
-      <y>290</y>
-      <width>125</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Term: </string>
-    </property>
-    <property name="readOnly">
-     <bool>true</bool>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="loanAmmountTextEdit">
-    <property name="geometry">
-     <rect>
-      <x>304</x>
-      <y>260</y>
-      <width>125</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>0</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="interestRateTextEdit">
-    <property name="geometry">
-     <rect>
-      <x>304</x>
-      <y>320</y>
-      <width>125</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>0</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="termTextEdit">
-    <property name="geometry">
-     <rect>
-      <x>304</x>
-      <y>290</y>
-      <width>125</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>0</string>
-    </property>
-   </widget>
-   <widget class="QPlainTextEdit" name="loanOutput">
-    <property name="geometry">
-     <rect>
-      <x>156</x>
-      <y>488</y>
-      <width>289</width>
-      <height>131</height>
-     </rect>
-    </property>
-    <property name="minimumSize">
-     <size>
-      <width>0</width>
-      <height>100</height>
-     </size>
-    </property>
-    <property name="readOnly">
-     <bool>true</bool>
-    </property>
-   </widget>
    <widget class="QPlainTextEdit" name="expressionTextEdit">
     <property name="geometry">
      <rect>
@@ -244,19 +28,6 @@
       <width>597</width>
       <height>51</height>
      </rect>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="loanDifButton">
-    <property name="geometry">
-     <rect>
-      <x>156</x>
-      <y>450</y>
-      <width>134</width>
-      <height>32</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Loan (Diffirential)</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="xTextEdit">
@@ -286,19 +57,6 @@
     </property>
     <property name="readOnly">
      <bool>true</bool>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="depositButton">
-    <property name="geometry">
-     <rect>
-      <x>459</x>
-      <y>450</y>
-      <width>281</width>
-      <height>32</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Deposit</string>
     </property>
    </widget>
    <widget class="QPushButton" name="calculateButton">
@@ -356,103 +114,13 @@
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QLineEdit" name="taxRateTextEdit">
-    <property name="geometry">
-     <rect>
-      <x>612</x>
-      <y>359</y>
-      <width>125</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>0</string>
-    </property>
-   </widget>
-   <widget class="QPlainTextEdit" name="depositOutout">
-    <property name="geometry">
-     <rect>
-      <x>459</x>
-      <y>498</y>
-      <width>294</width>
-      <height>121</height>
-     </rect>
-    </property>
-    <property name="minimumSize">
-     <size>
-      <width>0</width>
-      <height>100</height>
-     </size>
-    </property>
-    <property name="readOnly">
-     <bool>true</bool>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="lineEdit_9">
-    <property name="geometry">
-     <rect>
-      <x>459</x>
-      <y>328</y>
-      <width>125</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Interest rate: </string>
-    </property>
-    <property name="readOnly">
-     <bool>true</bool>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="lineEdit_7">
-    <property name="geometry">
-     <rect>
-      <x>459</x>
-      <y>260</y>
-      <width>125</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Deposit ammount: </string>
-    </property>
-    <property name="readOnly">
-     <bool>true</bool>
-    </property>
-   </widget>
-   <widget class="QCheckBox" name="CapitalisationCheckBox">
-    <property name="geometry">
-     <rect>
-      <x>610</x>
-      <y>423</y>
-      <width>19</width>
-      <height>18</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="paymentsPeriodicity">
-    <property name="geometry">
-     <rect>
-      <x>612</x>
-      <y>390</y>
-      <width>125</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>0</string>
-    </property>
-   </widget>
    <widget class="QCustomPlot" name="Plot" native="true">
     <property name="geometry">
      <rect>
       <x>869</x>
       <y>14</y>
-      <width>451</width>
-      <height>541</height>
+      <width>511</width>
+      <height>531</height>
      </rect>
     </property>
     <property name="minimumSize">
@@ -465,8 +133,8 @@
    <widget class="QLineEdit" name="lineEdit_13">
     <property name="geometry">
      <rect>
-      <x>880</x>
-      <y>600</y>
+      <x>340</x>
+      <y>460</y>
       <width>125</width>
       <height>21</height>
      </rect>
@@ -481,8 +149,8 @@
    <widget class="QLineEdit" name="lineEdit_14">
     <property name="geometry">
      <rect>
-      <x>880</x>
-      <y>630</y>
+      <x>340</x>
+      <y>490</y>
       <width>125</width>
       <height>21</height>
      </rect>
@@ -497,8 +165,8 @@
    <widget class="QLineEdit" name="lineEdit_15">
     <property name="geometry">
      <rect>
-      <x>1140</x>
-      <y>600</y>
+      <x>600</x>
+      <y>460</y>
       <width>125</width>
       <height>21</height>
      </rect>
@@ -513,8 +181,8 @@
    <widget class="QLineEdit" name="lineEdit_16">
     <property name="geometry">
      <rect>
-      <x>1140</x>
-      <y>630</y>
+      <x>600</x>
+      <y>490</y>
       <width>125</width>
       <height>21</height>
      </rect>
@@ -529,8 +197,8 @@
    <widget class="QLineEdit" name="Xmin">
     <property name="geometry">
      <rect>
-      <x>1010</x>
-      <y>600</y>
+      <x>470</x>
+      <y>460</y>
       <width>125</width>
       <height>21</height>
      </rect>
@@ -542,8 +210,8 @@
    <widget class="QLineEdit" name="Xmax">
     <property name="geometry">
      <rect>
-      <x>1010</x>
-      <y>630</y>
+      <x>470</x>
+      <y>490</y>
       <width>125</width>
       <height>21</height>
      </rect>
@@ -555,8 +223,8 @@
    <widget class="QLineEdit" name="Ymin">
     <property name="geometry">
      <rect>
-      <x>1270</x>
-      <y>600</y>
+      <x>730</x>
+      <y>460</y>
       <width>125</width>
       <height>21</height>
      </rect>
@@ -568,8 +236,8 @@
    <widget class="QLineEdit" name="Ymax">
     <property name="geometry">
      <rect>
-      <x>1270</x>
-      <y>630</y>
+      <x>730</x>
+      <y>490</y>
       <width>125</width>
       <height>21</height>
      </rect>
@@ -581,8 +249,8 @@
    <widget class="QLineEdit" name="lineEdit_17">
     <property name="geometry">
      <rect>
-      <x>1140</x>
-      <y>660</y>
+      <x>600</x>
+      <y>520</y>
       <width>125</width>
       <height>21</height>
      </rect>
@@ -597,8 +265,8 @@
    <widget class="QCheckBox" name="Yauto">
     <property name="geometry">
      <rect>
-      <x>1270</x>
-      <y>660</y>
+      <x>730</x>
+      <y>520</y>
       <width>19</width>
       <height>18</height>
      </rect>

@@ -27,8 +27,6 @@ set(PROJECT_SOURCES
         ../../backend/list.c
         ../../backend/stack.h
         ../../backend/stack.c
-        ../../backend/banks.h
-        ../../backend/banks.c
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
