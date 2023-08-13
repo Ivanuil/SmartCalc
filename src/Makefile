@@ -8,6 +8,9 @@ else
 	CHECK_FLAGS = -lcheck
 endif
 SRC_BACKEND := $(wildcard backend/*.c)
+HDR_BACKEND := $(wildcard backend/*.h)
+SRC_QT := $(wildcard gui/gt_gui/*.cpp)
+HDR_QT := $(wildcard gui/gt_gui/*.h)
 DOC_PATH := ../documentation
 
 all: test
@@ -18,8 +21,6 @@ install:
 	cp -R gui/gt_gui/gt_gui.app ../build/SmartCalc.app
 	chmod +rwx ../build
 	chmod +rwx ../build/SmartCalc.app
-	@chmod +rwx ../build
-	@chmod +rwx ../build/SmartCalc.app
 	- open ../build/SmartCalc.app
 
 uninstall:
@@ -72,3 +73,7 @@ gcov_report:
 clang-format:
 	cp ../materials/linters/.clang-format .
 	clang-format -n backend/*.c backend/*.h gui/gt_gui/*.h gui/gt_gui/*.cpp
+
+cppcheck:
+	cppcheck --enable=all --suppress=missingIncludeSystem $(SRC_BACKEND) $(HDR_BACKEND) --std=c11 --language=c
+	cppcheck --enable=all --suppress=missingIncludeSystem $(SRC_QT) $(HDR_QT) --std=c++17 --language=c++

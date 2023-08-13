@@ -17,9 +17,15 @@ Features:
  - Converting mathematical expression to reverse polish notation
  - Graph plotting of function y(x) (Created with [QCustomPlot](www.qcustomplot.com) library)
 
+Application was fully tested on MacOs Big Sur, backend additionally tested in Ubuntu Server 20.04
+
 Project was developed by a student of School 21 as an implementation of School 21's project task.
 
 ## Screenshots
+
+![](misc/images/img1.png)
+
+![](misc/images/img2.png)
 
 ## How to run
 

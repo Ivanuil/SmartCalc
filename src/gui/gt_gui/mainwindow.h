@@ -7,7 +7,6 @@
 #include <QMainWindow>
 
 extern "C" {
-#include "../../backend/banks.h"
 #include "../../backend/calc.h"
 }
 
@@ -25,11 +24,7 @@ class MainWindow : public QMainWindow {
   ~MainWindow();
 
  private slots:
-  // void on_actioncalculateButtonPressed_triggered();
   void handleCalculateButton();
-  void handleDifLoanButton();
-  void handleAnnLoanButton();
-  void handleDepositButton();
 
  private:
   Ui::MainWindow *ui;
